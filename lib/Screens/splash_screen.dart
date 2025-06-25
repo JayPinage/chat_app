@@ -10,29 +10,26 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-
-
-
-
-
   @override
-  void initState(){
-
-Future.delayed(Duration(seconds: 5),(){
-  return login();
-});
+  void initState() {
+    Future.delayed(Duration(seconds: 2), () {
+      return login();
+    });
     super.initState();
   }
 
-  void login(){
-
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
-
+  void login() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
   }
 
-  void sign(){
-Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>SignUpScreen()));
+  void sign() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => SignUpScreen()),
+    );
   }
 
   @override
